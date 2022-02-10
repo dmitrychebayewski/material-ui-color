@@ -1,13 +1,13 @@
 {
-  "name": "material-ui-color",
-  "version": "1.2.0",
+  "name": "@dmitrychebayewski/material-ui-color",
+  "version": "1.2.1",
   "description": "The lightest colorpicker for React Material-Ui. No dependencies. It uses Hooks and support Typescript, and more !",
   "main": "index.js",
   "module": "./esm/index.js",
   "typings": "index.d.ts",
   "homepage": "https://mikbry.github.io/material-ui-color/",
-  "repository": "https://github.com/mikbry/material-ui-color.git",
-  "bugs": "https://github.com/mikbry/material-ui-color/issues",
+  "repository": "https://github.com/dmitrychebayewski/material-ui-color.git#props_to_text_field",
+  "bugs": "https://github.com/dmitrychebayewski/material-ui-color/issues",
   "author": "Mik <mik@miklabs.com>",
   "license": "MIT",
   "keywords": [
