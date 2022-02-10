@@ -12,7 +12,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Popover from '@material-ui/core/Popover';
-import { StylesProvider, createGenerateClassName, makeStyles } from '@material-ui/core/styles';
+import { StylesProvider, createGenerateClassName} from '@material-ui/core/styles';
+import {useStyles} from './ColorPicker.style';
 
 import ColorButton from './ColorButton';
 import ColorBox from './ColorBox';
@@ -20,17 +21,6 @@ import * as ColorTool from '../helpers/colorTool';
 import uncontrolled from '../helpers/uncontrolled';
 import * as CommonTypes from '../helpers/commonTypes';
 import useTranslate from '../helpers/useTranslate';
-
-const useStyles = makeStyles({
-  root: {
-    display: 'flex',
-    flexDirection: 'row',
-    width: 'max-content',
-  },
-  colorpickerButton: {
-    margin: 6,
-  },
-});
 
 const generateClassName = createGenerateClassName({
   seed: 'ColorPicker',
@@ -64,6 +54,8 @@ const ColorPicker = ({
   hslGradient,
   hideTextfield,
   disablePlainColor,
+  embeddedButton,
+    ...custom
 }) => {
   const classes = useStyles();
   const refPicker = useRef(null);
@@ -142,16 +134,16 @@ const ColorPicker = ({
         {color.raw}
       </div>
     ) : (
-      <TextField color="primary" value={raw} onChange={handleChange} data-testid="colorpicker-input" />
+      <TextField color="primary" value={raw} onChange={handleChange} data-testid="colorpicker-input" {...custom}/>
     );
   }
 
   return (
     <StylesProvider generateClassName={generateClassName}>
-      <div ref={refPicker} className={classes.root}>
+      <div ref={refPicker} className={embeddedButton? classes.embeddedRoot: classes.root}>
         <ColorButton
           data-testid="colorpicker-button"
-          className={`muicc-colorpicker-button ${classes.colorpickerButton}`}
+          className={`muicc-colorpicker-button ${embeddedButton? classes.embeddedColorPickerButton: classes.colorPickerButton}`}
           color={color}
           onClick={handleClick}
         />
@@ -163,22 +155,23 @@ const ColorPicker = ({
 };
 
 ColorPicker.propTypes = {
-  value: CommonTypes.color,
-  disableTextfield: PropTypes.bool,
-  deferred: PropTypes.bool,
-  palette: CommonTypes.palette,
-  inputFormats: CommonTypes.inputFormats,
-  onChange: PropTypes.func.isRequired,
-  onOpen: PropTypes.func,
-  openAtStart: PropTypes.bool,
-  doPopup: PropTypes.func,
-  /**
-    Don't use alpha
-   */
-  disableAlpha: PropTypes.bool,
-  hslGradient: PropTypes.bool,
-  hideTextfield: PropTypes.bool,
-  disablePlainColor: PropTypes.bool,
+    value: CommonTypes.color,
+    disableTextfield: PropTypes.bool,
+    deferred: PropTypes.bool,
+    palette: CommonTypes.palette,
+    inputFormats: CommonTypes.inputFormats,
+    onChange: PropTypes.func.isRequired,
+    onOpen: PropTypes.func,
+    openAtStart: PropTypes.bool,
+    doPopup: PropTypes.func,
+    /**
+     Don't use alpha
+     */
+    disableAlpha: PropTypes.bool,
+    hslGradient: PropTypes.bool,
+    hideTextfield: PropTypes.bool,
+    disablePlainColor: PropTypes.bool,
+    embeddedButton: PropTypes.bool
 };
 
 ColorPicker.defaultProps = {
@@ -194,6 +187,7 @@ ColorPicker.defaultProps = {
   hslGradient: false,
   hideTextfield: false,
   disablePlainColor: false,
+  embeddedButton: false
 };
 
 export default uncontrolled(ColorPicker);

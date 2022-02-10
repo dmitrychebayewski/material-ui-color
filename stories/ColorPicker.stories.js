@@ -37,6 +37,12 @@ Basic.story = {
   parameters: { defaultValue: '#000' },
 };
 
+export const Embedded = () => <ColorPicker defaultValue="#000" variant="outlined" fullWidth embeddedButton />;
+
+Embedded.story = {
+  parameters: { defaultValue: '#000', variant: "outlined", fullWidth: true, embeddedButton: true },
+};
+
 export const OpenAtStart = () => <ColorPicker defaultValue="#000" openAtStart />;
 OpenAtStart.story = {
   parameters: { defaultValue: '#000', openAtStart: true },
