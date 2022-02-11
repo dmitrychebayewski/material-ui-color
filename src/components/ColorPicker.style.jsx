@@ -5,21 +5,13 @@ export const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
         width: 'max-content',
-    },
-    colorPickerButton: {
-        margin: 6
-    },
-    embeddedRoot: {
-        display: 'flex',
-        flexDirection: 'row',
-        width: 'max-content',
         position: 'relative',
     },
-    embeddedColorPickerButton: {
+    colorPickerButton: {
         margin: 0,
         zIndex: 2,
         top: '50%',
-        right: '2%',
+        right: '4%',
         position: 'absolute',
         transform: 'translateY(-50%)'
     },});

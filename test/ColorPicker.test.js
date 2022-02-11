@@ -152,7 +152,7 @@ test('ColorPicker hideTextfield', async () => {
 
 test('ColorPicker Embedded Outlined colorbutton click', async () => {
   const onOpen = jest.fn();
-  const { findByTestId, rerender } = render(<ColorPicker value="red" variant="outlined" fullWidth embeddedButton  />);
+  const { findByTestId, rerender } = render(<ColorPicker value="red" variant="outlined" fullWidth />);
   let button = await findByTestId('colorpicker-button');
   fireEvent.click(button);
   expect(onOpen).toHaveBeenCalledTimes(0);

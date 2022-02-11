@@ -1,4 +1,6 @@
-declare module 'material-ui-color' {
+import {TextFieldProps} from '@material-ui/core/TextField';
+
+declare module '@dmitrychebayewski/material-ui-color' {
 
   enum ColorFormat {
     "plain",
@@ -21,7 +23,7 @@ declare module 'material-ui-color' {
     hsv: [number, number, number];
     hsl: [number, number, number];
   }
-  
+
   interface ColorError extends ColorObject {
     name: "none";
     error: "Wrong format" | "Not an hex value";
@@ -37,12 +39,12 @@ declare module 'material-ui-color' {
   interface ColorType extends ColorObject {
     format: ColorFormat;
   }
-  
+
   type Color = ColorType | ColorError;
   type ColorValue = Color | string | number | Array<string | number>;
   type PaletteRecord = Record<string,string>;
 
-  interface ColorPickerProps {
+  interface ColorPickerProps extends Omit<TextFieldProps, 'onChange'>{
     value?: ColorValue;
     defaultValue?: ColorValue;
     disableTextfield?: boolean;
@@ -126,7 +128,7 @@ declare module 'material-ui-color' {
   interface i18n {
     language: string;
   }
-  
+
   interface Translation {
     t: typeof TFunction,
     i18n?: i18n;

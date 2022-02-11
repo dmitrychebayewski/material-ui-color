@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import Button from '@material-ui/core/Button';
-// import { useTheme } from '@material-ui/styles';
+
 import { ColorPicker, useTranslate } from '../src';
 
 import frFR from '../translations/frFR.json';
@@ -40,7 +40,7 @@ Basic.story = {
 export const Embedded = () => <ColorPicker defaultValue="#000" variant="outlined" fullWidth embeddedButton />;
 
 Embedded.story = {
-  parameters: { defaultValue: '#000', variant: "outlined", fullWidth: true, embeddedButton: true },
+  parameters: { defaultValue: '#000', variant: "outlined", fullWidth: true},
 };
 
 export const OpenAtStart = () => <ColorPicker defaultValue="#000" openAtStart />;

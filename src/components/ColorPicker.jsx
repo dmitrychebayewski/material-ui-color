@@ -54,7 +54,6 @@ const ColorPicker = ({
   hslGradient,
   hideTextfield,
   disablePlainColor,
-  embeddedButton,
     ...custom
 }) => {
   const classes = useStyles();
@@ -140,10 +139,10 @@ const ColorPicker = ({
 
   return (
     <StylesProvider generateClassName={generateClassName}>
-      <div ref={refPicker} className={embeddedButton? classes.embeddedRoot: classes.root}>
+      <div ref={refPicker} className={classes.root}>
         <ColorButton
           data-testid="colorpicker-button"
-          className={`muicc-colorpicker-button ${embeddedButton? classes.embeddedColorPickerButton: classes.colorPickerButton}`}
+          className={`muicc-colorpicker-button ${classes.colorPickerButton}`}
           color={color}
           onClick={handleClick}
         />
@@ -170,8 +169,7 @@ ColorPicker.propTypes = {
     disableAlpha: PropTypes.bool,
     hslGradient: PropTypes.bool,
     hideTextfield: PropTypes.bool,
-    disablePlainColor: PropTypes.bool,
-    embeddedButton: PropTypes.bool
+    disablePlainColor: PropTypes.bool
 };
 
 ColorPicker.defaultProps = {
@@ -186,8 +184,7 @@ ColorPicker.defaultProps = {
   disableAlpha: false,
   hslGradient: false,
   hideTextfield: false,
-  disablePlainColor: false,
-  embeddedButton: false
+  disablePlainColor: false
 };
 
 export default uncontrolled(ColorPicker);
