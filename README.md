@@ -70,9 +70,9 @@ https://mikbry.github.io/material-ui-color/
 
 Also in codesanbox
 
-- Javascript : https://codesandbox.io/s/material-ui-color-qb4vm?file=/src/App.jsx
+- Javascript : https://codesandbox.io/s/eager-shtern-1dkr5?file=/src/App.js
 
-- Typescript : https://codesandbox.io/s/material-ui-color-picker-qvcg3?file=/src/App.tsx
+- Typescript : https://codesandbox.io/s/relaxed-booth-yzy5d?file=/src/App.tsx
 
 
 ## Requirements
