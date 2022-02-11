@@ -1,6 +1,6 @@
 import {TextFieldProps} from '@material-ui/core/TextField';
 
-declare module '@dmitrychebayewski/material-ui-color' {
+declare module '@dmitrychebayewski/material-ui-4-color' {
 
   enum ColorFormat {
     "plain",

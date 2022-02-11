@@ -6,7 +6,7 @@ import blueGrey from "@material-ui/core/colors/blueGrey";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import { Color, ColorPicker, createColor } from "material-ui-color";
+import { Color, ColorPicker, createColor } from "@dmitrychebayewski/material-ui-4-color";
 import "./App.css";
 
 const theme = createMuiTheme({

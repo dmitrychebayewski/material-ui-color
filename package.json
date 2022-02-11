@@ -1,6 +1,6 @@
 {
-  "name": "@dmitrychebayewski/material-ui-color",
-  "version": "1.2.4",
+  "name": "@dmitrychebayewski/material-ui-4-color",
+  "version": "1.2.5",
   "description": "The lightest colorpicker for React Material-Ui. No dependencies. It uses Hooks and support Typescript, and more !",
   "main": "index.js",
   "module": "./esm/index.js",

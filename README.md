@@ -15,11 +15,11 @@
 [codecov-image]: https://codecov.io/gh/mikbry/material-ui-color/branch/master/graph/badge.svg?token=K4P0vnM5fh
 [codecov-url]: https://codecov.io/gh/mikbry/material-ui-color
 [npm-image]: https://img.shields.io/npm/v/material-ui-color.svg
-[npm-url]: https://npmjs.org/package/material-ui-color
+[npm-url]: https://www.npmjs.com/package/@dmitrychebayewski/material-ui-4-color
 [license-image]: https://img.shields.io/github/license/mikbry/material-ui-color
 [License-url]:https://github.com/mikbry/material-ui-color/blob/master/LICENSE
 [min-image]:https://badgen.net/bundlephobia/min/material-ui-color
-[min-url]:https://bundlephobia.com/result?p=material-ui-color
+[min-url]:https://bundlephobia.com/result?p=@dmitrychebayewski/material-ui-4-color
 [deps-svg]: https://david-dm.org/mikbry/material-ui-color.svg
 [deps-url]: https://david-dm.org/mikbry/material-ui-color
 [dev-deps-svg]: https://david-dm.org/mikbry/material-ui-color/dev-status.svg
@@ -27,15 +27,15 @@
 [peer-deps-svg]: https://david-dm.org/mikbry/material-ui-color/peer-status.svg
 [peer-deps-url]: https://david-dm.org/mikbry/material-ui-color#info=peerDependencies
 [downloads-image]: http://img.shields.io/npm/dm/material-ui-color.svg
-[downloads-url]: http://npm-stat.com/charts.html?package=material-ui-color
+[downloads-url]: http://npm-stat.com/charts.html?package=@dmitrychebayewski/material-ui-4-color
 
 > Collections of color components for [material-ui](https://github.com/mui-org/material-ui). No dependencies, small, highly customizable and theming support !
 
-![Video of ColorPicker](./images/muicc-v0-2.webp)
+![Video of ColorPicker](./images/muicc-v0-3.webp)
 
 ## Contents
-
-- [Why another ColorPicker?](#why-another-colorpicker)
+- [Why rework Mikbry's project?](#Why-rework-Mikbry's-project?)
+- [Why another ColorPicker?](#Why-another-ColorPicker-?)
 - [Documentation](#documentation)
 - [Requirements](#requirements)
 - [Install](#install)
@@ -43,6 +43,12 @@
 - [Roadmap](#roadmap)
 - [Contribute](#contribute)
 - [License](#license)
+
+## Why rework Mikbry's project?
+- Plans are submitting PR into his mui-color project, but I need enhanced Color Picker MUI 4 for a limited time;
+- Allows passing useful properties to material-ui TextField underlying component;
+- Stable version 1.2.0 codebase, Material UI V.4;
+- ColorPicker adornment: Button, embedded in the underlying TextField (similarly to material-ui-pickers experience). 
 
 ## Why another ColorPicker ?
 
@@ -76,12 +82,12 @@ Also in codesanbox
 ## Install
 
 ```bash
-yarn add material-ui-color
+yarn add @dmitrychebayewski/material-ui-4-color
 ```
 
 Or using npm
 ```bash
-npm install material-ui-color
+npm install @dmitrychebayewski/material-ui-4-color
 ```
 
 ## Usage
@@ -111,8 +117,6 @@ export const Container = () => (
   </div>
 );
 ```
-
-At first it display a button + an input
 
 [ColorPicker documentation](https://mikbry.github.io/material-ui-color/?path=/story/components-colorpicker--basic)
 
@@ -152,7 +156,7 @@ export const Container = () => (
 A component to display a grid of color buckets.
 
 ```javascript
-import { ColorPalette } from 'material-ui-color';
+import { ColorPalette } from '@dmitrychebayewski/material-ui-4-color';
 
 const palette = {
   red: '#ff0000',
@@ -197,10 +201,10 @@ export const Container = () => (
 
 ## Roadmap
 
-### v1.0.0 - [Current version](https://github.com/mikbry/material-ui-color/releases/tag/v1.0.0)
-- remove `styled-components` to have less dependencies and reduce size
-- display wrong color using a red checked box
-- bugs fixes
+### v1.2.5 - [Current version](https://github.com/dmitrychebayewski/material-ui-color/tree/props_to_text_field)
+- More Picker Button adornments
+- Submit a PR to Mikbry's mui-color 
+- Make @dmitrychebayewski/material-ui-4-color deprecated 
 
 ## Contribute
 

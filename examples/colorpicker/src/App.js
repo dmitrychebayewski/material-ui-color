@@ -4,7 +4,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import { ColorPicker, createColor } from "material-ui-color";
+import { ColorPicker, createColor } from "@dmitrychebayewski/material-ui-4-color";
 
 const theme = createMuiTheme({
   palette: {}
@@ -30,7 +30,7 @@ export default function App() {
           </div>
         </Box>
         <Box>
-          <a href="https://github.com/mikbry/material-ui-color">
+          <a href="https://github.com/dmitrychebayewski/material-ui-color/tree/props_to_text_field">
             made using material-ui-color
           </a>
           <div>Javascript, material-ui and React</div>
